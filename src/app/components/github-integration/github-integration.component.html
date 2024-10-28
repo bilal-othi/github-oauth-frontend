@@ -1,0 +1,35 @@
+<div class="expandable-container">
+    <div class="header" (click)="toggleExpand()">
+        <div class="github-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon" />
+                <span class="github-title">Github</span>
+                <span *ngIf="isConnected" class="green-tick">✔</span>
+                <img *ngIf="isConnected" class="time-icon" src="https://img.icons8.com/ios/50/clock--v1.png" alt="Time Icon" />
+            </div>
+
+            <div style="text-align: right; margin-left: auto;">
+                <span *ngIf="isConnected" class="sync-info">
+                    {{ username }} : Last Synced {{ connectedAt }}
+                </span>
+                <p *ngIf="isConnected" class="sync-info tight-spacing" style="padding-right: 10px;">Sync Type: Full</p>
+            </div>
+        </div>
+
+        <span class="arrow-icon" [ngClass]="{ 'expanded': isExpanded }"></span>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0;" *ngIf="!isConnected">
+        <button class="remove-btn" mat-raised-button color="primary" (click)="connectToGitHub()">Connect</button>
+        <h2 style="color: #434FBC;">Connect Sredio to Github</h2>
+    </div>
+
+    <div class="content" [style.display]="isExpanded ? 'block' : 'none'">
+        <div style="text-align: right; margin-right: 10px;" *ngIf="isConnected">
+            <button (click)="removeIntegration()" class="remove-btn">
+                Remove
+                <i class="fab fa-github icon"></i>
+            </button>
+        </div>
+    </div>
+</div>

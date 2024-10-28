@@ -1,0 +1,101 @@
+.github-container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.github-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.github-title {
+    font-weight: normal;
+    margin-left: 10px;
+}
+.time-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+.right-align-text {
+    text-align: right;
+    margin-right: 10px;
+}
+.green-tick {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+}
+.sync-info {
+    margin-left: auto;
+    margin-right: 10px;
+    color: grey;
+}
+button {
+    margin: 10px;
+}
+.right-align {
+    text-align: right;
+}
+.expandable-container {
+    border: 0px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px auto;
+}
+.remove-btn {
+    background-color: #434FBC;
+    color: white;
+    border: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.arrow-icon {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.content {
+    padding: 10px;
+    background-color: white;
+}
+.tight-spacing {
+    margin: 0;
+    line-height: 1.2;
+}
+.arrow-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid grey;
+    transition: transform 0.3s;
+}
+.arrow-icon.expanded {
+    transform: rotate(180deg);
+}
