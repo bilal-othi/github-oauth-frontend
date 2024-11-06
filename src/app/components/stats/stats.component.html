@@ -1,0 +1,15 @@
+<div style="display: flex; flex-direction: column; height: 60vh; width: 100vw;">
+
+    <p class="sync-info tight-spacing" style="padding-right: 10px;">Stats of selected repository</p>
+    
+    <ag-grid-angular
+    *ngIf="rowData && rowData.length > 0"
+    class="ag-theme-quartz" 
+    style="height: 500px"
+    [rowData]="rowData" 
+    [columnDefs]="colDefs" />
+
+
+    </div>
+  
+  

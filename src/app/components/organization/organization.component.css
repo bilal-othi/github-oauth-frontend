@@ -1,0 +1,9 @@
+  
+  :host {
+    display: block;
+    width: 100%;
+  }
+
+  .ag-theme-alpine {
+    border: 1px solid red; /* Temporary border for debugging */
+  }

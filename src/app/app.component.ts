@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+
 import { GithubIntegrationComponent } from './components/github-integration/github-integration.component';
+
 
 @Component({
   selector: 'app-root',
@@ -11,3 +13,6 @@ import { GithubIntegrationComponent } from './components/github-integration/gith
 export class AppComponent {
   title = 'github-oauth-frontend';
 }
+
+
+//export class AppModule {}

@@ -1,3 +1,4 @@
+
 <div class="expandable-container">
     <div class="header" (click)="toggleExpand()">
         <div class="github-container" style="display: flex; justify-content: space-between; align-items: center;">
@@ -32,4 +33,22 @@
             </button>
         </div>
     </div>
+
+    <!-- Organizations and Repositories -->
+     <div *ngIf="isConnected">
+        <h2 style="color: #434FBC;">
+            Github Projects
+            <i class="fas fa-download" style="margin-left: 8px; font-size: 0.8em;"></i>
+        </h2>
+        <p class="sync-info tight-spacing" style="padding-right: 10px;">Specify which project which should pull from when synchronizing data into Sredio.</p>
+        <app-organization [organizations]="organizations" [user]="username"></app-organization>
+     </div>
+
+
+     
+    
+
+
+
+
 </div>
