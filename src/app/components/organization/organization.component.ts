@@ -34,6 +34,7 @@ export class OrganizationComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['organizations'] && changes['organizations'].currentValue) {
       this.rowData = changes['organizations'].currentValue;
+      console.log('Updated rowData:', this.rowData); 
     }
   }
   
